@@ -92,7 +92,7 @@ const Header: React.FunctionComponent<HeaderProps> = ({
       <Grid item>
         <Select
           value={getMonth(date)}
-          onChange={handleMonthChange}
+          onChange={(e) => handleMonthChange(e)}
           MenuProps={{ disablePortal: true }}
         >
           {MONTHS.map((month, idx) => (
@@ -106,7 +106,7 @@ const Header: React.FunctionComponent<HeaderProps> = ({
       <Grid item>
         <Select
           value={getYear(date)}
-          onChange={handleYearChange}
+          onChange={(e) => handleYearChange(e)}
           MenuProps={{ disablePortal: true }}
         >
           {generateYears(date, 30).map((year) => (
