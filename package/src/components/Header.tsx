@@ -1,5 +1,5 @@
 /* eslint-disable radix */
-
+// @ts-ignore
 import {
   Grid,
   makeStyles,
@@ -70,11 +70,11 @@ const Header: React.FunctionComponent<HeaderProps> = ({
 }: HeaderProps) => {
   const classes = useStyles();
 
-  const handleMonthChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleMonthChange = (event: any) => {
     setDate(setMonth(date, parseInt(event.target.value)));
   };
 
-  const handleYearChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleYearChange = (event: any) => {
     setDate(setYear(date, parseInt(event.target.value)));
   };
 
